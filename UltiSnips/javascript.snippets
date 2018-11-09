@@ -1,0 +1,110 @@
+# Welcome to the Javascript ES6 snippets!
+
+# Generator function
+snippet gfn
+function* ${1:name}(${2}) {
+	yield ${3};
+}
+endsnippet
+
+# Arrow function
+snippet => "Arrow function" i
+(${1}) => {
+	${2}
+}
+endsnippet
+
+# Class
+snippet class
+class ${1:name} {
+	constructor(${2:arg}) {
+		${3:// init}
+	}
+	${4}
+}
+endsnippet
+
+# For of loop
+snippet forof
+for (let ${1:s} of ${2:sequence}) {
+	${3}
+}
+endsnippet
+
+# snippets by LU TAO
+# Import
+snippet im
+import ${1:foo} from '${2:bar}'
+endsnippet
+
+# Welcome to the Javascript ES5 snippets!
+snippet fori
+for (let i = 0; i < ${1:list}.length; i++) {
+  let ${2} = $1[i];
+  ${3}
+}
+endsnippet
+
+snippet forj
+for (let j = 0; j < ${1:list}.length; j++) {
+  let ${2} = $1[j];
+  ${3}
+}
+endsnippet
+
+snippet if
+if (${1}) {
+  ${2}
+}
+endsnippet
+
+snippet aaa "async.autoInject"
+async.autoInject({
+  ${1:funcName}: (_cb) => {
+    ${2}
+  },
+}, (err, ret) => {
+  if (err) cb(err);
+  cb();
+});
+endsnippet
+
+snippet fn "function funcName() {}"
+function ${1:funcName}(${2}) {
+  ${3}
+}
+endsnippet
+
+snippet fc "funcName: (_cb) => {}"
+${1:funcName}: (${2}_cb) => {
+  ${3}
+},
+endsnippet
+
+snippet ifc
+if (err) return cb(err);
+endsnippet
+
+snippet ifn
+if (err) return next(err);
+endsnippet
+
+snippet cbe "new AppErr"
+return _cb(new AppErr('${1:message}', ${2:null}, {
+  text: '${3}',
+}));
+endsnippet
+
+snippet ne "new AppErr"
+return next(new AppErr('${1:message}', ${2:null}, {
+  text: '${3}',
+}));
+endsnippet
+
+snippet end
+if (err) {
+  console.log(err);
+  process.exit(1);
+}
+process.exit(0);
+endsnippet
