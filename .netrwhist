@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/lutao/go/src/qiniu.com/keystone/make'
-let g:netrw_dirhist_2='/Users/lutao/go/src/github.com/lutaoact/z/jenkins'
-let g:netrw_dirhist_3='/Users/lutao/go/src/qiniu.com/ke/portal/backend/utils'
-let g:netrw_dirhist_4='/Users/lutao/go/src/qiniu.com/ke/client/account'
-let g:netrw_dirhist_5='/Users/lutao/helm-repos/account/templates'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/lutao/go/src/qiniu.com/ke/keas/api.v1'
+let g:netrw_dirhist_2='/Users/lutao/go/src/qiniu.com/qce/make'
+let g:netrw_dirhist_3='/Users/lutao/go/src/qiniu.com/qce/pkg/hub/server/token'
+let g:netrw_dirhist_4='/Users/lutao/go/src/qiniu.com/qce/test/testdata'
+let g:netrw_dirhist_5='/Users/lutao/go/src/github.com/swaggo/gin-swagger'
+let g:netrw_dirhist_6='/Users/lutao/me/docker_for_keystone'
+let g:netrw_dirhist_7='/Users/lutao/go/src/qiniu.com/qce/pkg/hub/clair'

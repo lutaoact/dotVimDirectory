@@ -5,12 +5,55 @@ priority -10
 #######################
 ## My Config Begin
 #######################
-snippet ifp "if error then processResErr(c, err)"
+snippet rr "if error then processResErr(c, err)"
+func ${0:funcName}(c *gin.Context) {
+}
+endsnippet
+
+snippet l
+logger := utils.ReqEntry(c)
+endsnippet
+
+snippet u
+user := common.GetAuthedUser(c)
+endsnippet
+
+
+snippet lu
+logger := utils.ReqEntry(c).WithFields(logrus.Fields{${0}})
+endsnippet
+
+snippet ll
+logger = logger.WithFields(logrus.Fields{${0}})
+endsnippet
+
+snippet c
+func ${1:funcName}(c *gin.Context) {
+	logger := utils.ReqEntry(c)
+	${2}
+}
+endsnippet
+
+snippet jb "\`json:key bson:key\`"
+\`json:"`!v go#util#snippetcase(matchstr(getline("."), '\w\+'))`" bson:"`!v go#util#snippetcase(matchstr(getline("."), '\w\+'))`"\`
+endsnippet
+
+snippet ifl
 if err != nil {
-	processResErr(c, err)
+	logger.Errorln(err)
+	${0}
+}
+endsnippet
+
+snippet ifp
+if err := c.ShouldBindJSON(&${0}); err != nil {
+	h.E(c, h.EParamsError.WithPayload(err.Error()))
 	return
 }
-${0}
+endsnippet
+
+snippet le
+logger.Errorln(err)
 endsnippet
 
 snippet ifd "if error then dberr"
